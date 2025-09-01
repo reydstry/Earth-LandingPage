@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth</title>
+    <link rel="icon" type="assets/favicon.png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="title">🌏 EARTH</div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#facts">Facts</a>
+        <a href="#gallery">Galery</a>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section id="home" class="section home">
+      <div class="home-content">
+        <h1>Our Home in the Universe</h1>
+        <p>Bumi adalah rumah kita di jagat raya, planet ketiga dari Matahari
+          yang penuh dengan kehidupan. Dengan daratan luas dan lautan yang
+          mengelilinginya, Bumi menjadi tempat di mana manusia dan jutaan
+          makhluk hidup lainnya tumbuh dan berkembang.</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="about-content">
+        <img src="assets/about.jpg" alt="about image" />
+        <div class="about-text">
+          <h2>Apasih Bumi itu?</h2>
+          <p>
+            Bumi adalah planet ketiga dari Matahari dan satu-satunya yang
+            diketahui dapat mendukung kehidupan. Dengan atmosfer kaya oksigen
+            dan nitrogen, serta lautan luas dan daratan yang beragam, Bumi
+            menyediakan keseimbangan unik yang membuat kehidupan bisa tumbuh dan
+            berkembang.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="facts" class="facts">
+      <button class="facts-arrow prev" aria-label="Sebelumnya">❮</button>
+      <button class="facts-arrow next" aria-label="Berikutnya">❯</button>
+
+      <div class="facts-track" id="factsTrack" tabindex="0"
+        aria-label="Slider Fakta Bumi">
+        <section class="fact-slide" style="--bg:url('assets/slide1.jpg')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Planet ke-3 dari Matahari</h2>
+            <p>Bumi berjarak ~150 juta km dari Matahari — nyaman di zona layak
+              huni.</p>
+          </div>
+        </section>
+
+        <section class="fact-slide" style="--bg:url('assets/slide2.jpg')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Planet Biru</h2>
+            <p>Lautan menutupi sekitar 71% permukaan, membentuk iklim dan siklus
+              air global.</p>
+          </div>
+        </section>
+
+        <section class="fact-slide" style="--bg:url('assets/slide3.jpg')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Atmosfer Pelindung</h2>
+            <p>Didominasi nitrogen & oksigen — menjaga suhu dan menyaring
+              radiasi berbahaya.</p>
+          </div>
+        </section>
+
+        <section class="fact-slide" style="--bg:url('assets/slide4.jpg')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <h2>Satelit Bumi</h2>
+            <p>
+              Bumi memiliki satu satelit alami, Bulan, yang memengaruhi pasang
+              surut dan stabilitas iklim.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- (Opsional) indikator titik -->
+      <div class="facts-dots" id="factsDots" aria-hidden="true"></div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <h2 class="gallery-title">Gallery</h2>
+
+      <div class="gallery-grid">
+        <!-- Ganti src & data-full ke gambarmu sendiri -->
+        <figure class="gallery-item">
+          <img loading="lazy" src="assets/galeri1.jpg"
+            data-full="assets/galeri1.jpg" alt="Earth view A">
+          <figcaption>Bumi dari orbit</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img loading="lazy" src="assets/galeri2.jpg"
+            data-full="assets/galeri2.jpg" alt="Earth view B">
+          <figcaption>Satelit Bumi</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img loading="lazy" src="assets/galeri3.jpg"
+            data-full="assets/galeri3.jpg" alt="Earth view C">
+          <figcaption>Fenomena Alam</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img loading="lazy" src="assets/galeri4.jpg"
+            data-full="assets/galeri4.jpg" alt="Earth view D">
+          <figcaption>Pegunungan Himalaya</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img loading="lazy" src="assets/galeri5.jpg"
+            data-full="assets/galeri5.jpg" alt="Earth view E">
+          <figcaption>Hutan tropis</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img loading="lazy" src="assets/galeri6.jpg"
+            data-full="assets/galeri6.jpg" alt="Earth view F">
+          <figcaption>Stasiun Luar Angkasa</figcaption>
+        </figure>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lb-btn lb-close" aria-label="Tutup">✕</button>
+        <button class="lb-btn lb-prev" aria-label="Sebelumnya">❮</button>
+        <img class="lb-img" alt>
+        <button class="lb-btn lb-next" aria-label="Berikutnya">❯</button>
+        <div class="lb-caption" id="lbCaption"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Earth Information. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
