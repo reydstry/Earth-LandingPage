@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function vw(){ return track.clientWidth; }
 
-  // Dots
   slides.forEach((_, i) => {
     const b = document.createElement('button');
     b.setAttribute('aria-label', 'Ke slide ' + (i+1));
@@ -36,18 +35,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
   track.addEventListener('scroll', updateDots);
   window.addEventListener('resize', () => {
-    // jaga posisi saat resize
     track.scrollTo({ left: activeIndex() * vw() });
     updateDots();
   });
 
-  // Akses keyboard
   track.addEventListener('keydown', (e) => {
     if(e.key === 'ArrowLeft'){ e.preventDefault(); prev.click(); }
     if(e.key === 'ArrowRight'){ e.preventDefault(); next.click(); }
   });
 
-  // Init
   updateDots();
 
   const items = Array.from(grid.querySelectorAll('.gallery-item img'));
@@ -61,38 +57,32 @@ document.addEventListener('DOMContentLoaded', function(){
     lbCap.textContent = img.closest('figure').querySelector('figcaption')?.textContent || '';
     lb.classList.add('active');
     lb.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; // kunci scroll belakang
+    document.body.style.overflow = 'hidden'; 
   }
   function close(){
     lb.classList.remove('active');
     lb.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    // kosongkan src untuk hemat memori (opsional)
-    // lbImg.src = '';
   }
   function show(delta){
     idx = (idx + delta + items.length) % items.length;
     open(idx);
   }
 
-  // Buka dari grid
   items.forEach((img, i) => {
     img.addEventListener('click', () => open(i));
     img.addEventListener('keydown', (e) => { if(e.key === 'Enter'){ open(i); }});
-    img.tabIndex = 0; // akses keyboard
+    img.tabIndex = 0;
   });
 
-  // Kontrol lightbox
   btnPrev.addEventListener('click', () => show(-1));
   btnNext.addEventListener('click', () => show(1));
   btnClose.addEventListener('click', close);
 
-  // Tutup jika klik area gelap (bukan gambar/btn)
   lb.addEventListener('click', (e) => {
     if(e.target === lb) close();
   });
 
-  // Keyboard
   document.addEventListener('keydown', (e) => {
     if(!lb.classList.contains('active')) return;
     if(e.key === 'Escape') close();
@@ -100,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function(){
     if(e.key === 'ArrowRight') show(1);
   });
 
-  // Remove any arrow button event listeners and keep only the dots navigation logic
   const handleDotClick = (index) => {
     const slides = document.querySelectorAll('.fact-slide');
     if (slides[index]) {
