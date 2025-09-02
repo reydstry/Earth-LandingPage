@@ -146,19 +146,13 @@ body {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
-  /* penting biar berhenti di tiap slide */
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* Improved touch scrolling */
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer/Edge */
 }
 
-.facts-track::-webkit-scrollbar {
-  height: 0;
-}
-
-.facts-track {
-  scrollbar-width: none;
-}
-
+/* Remove or comment out any .facts-arrow related styles */
 .fact-slide {
   position: relative;
   flex: 0 0 100vw;
@@ -206,8 +200,6 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 300);
   opacity: .95;
 }
-
-/* Panah *
 
 /* Dots indikator (opsional) */
 .facts-dots {
@@ -501,6 +493,10 @@ body {
     padding: 20px;
   }
 
+  .facts-dots {
+    
+  }
+
   .slide-content {
     padding: 16px;
   }
@@ -512,6 +508,7 @@ body {
   .slide-content p {
     font-size: 14px;
   }
+
 
   .gallery {
     padding: 40px 12px;

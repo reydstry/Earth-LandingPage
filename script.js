@@ -14,14 +14,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function vw(){ return track.clientWidth; }
 
-  // Tombol panah: scroll relatif 1 layar
-  prev.addEventListener('click', () => {
-    track.scrollBy({ left: -vw(), behavior: 'smooth' });
-  });
-  next.addEventListener('click', () => {
-    track.scrollBy({ left:  vw(), behavior: 'smooth' });
-  });
-
   // Dots
   slides.forEach((_, i) => {
     const b = document.createElement('button');
@@ -107,4 +99,13 @@ document.addEventListener('DOMContentLoaded', function(){
     if(e.key === 'ArrowLeft') show(-1);
     if(e.key === 'ArrowRight') show(1);
   });
+
+  // Remove any arrow button event listeners and keep only the dots navigation logic
+  const handleDotClick = (index) => {
+    const slides = document.querySelectorAll('.fact-slide');
+    if (slides[index]) {
+      slides[index].scrollIntoView({ behavior: 'smooth' });
+      updateActiveDot(index);
+    }
+  };
 });
