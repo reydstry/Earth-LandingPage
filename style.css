@@ -207,38 +207,7 @@ body {
   opacity: .95;
 }
 
-/* Panah */
-.facts-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, .55);
-  background: var(--arrow-bg);
-  color: #fff;
-  font-size: 24px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  z-index: 10;
-  /* di atas overlay apa pun */
-  backdrop-filter: blur(6px);
-  pointer-events: auto;
-}
-
-.facts-arrow:hover {
-  background: var(--arrow-bg-hover);
-}
-
-.facts-arrow.prev {
-  left: 16px;
-}
-
-.facts-arrow.next {
-  right: 16px;
-}
+/* Panah *
 
 /* Dots indikator (opsional) */
 .facts-dots {
@@ -542,12 +511,6 @@ body {
 
   .slide-content p {
     font-size: 14px;
-  }
-
-  .facts-arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
   }
 
   .gallery {
