@@ -39,11 +39,6 @@ document.addEventListener('DOMContentLoaded', function(){
     updateDots();
   });
 
-  track.addEventListener('keydown', (e) => {
-    if(e.key === 'ArrowLeft'){ e.preventDefault(); prev.click(); }
-    if(e.key === 'ArrowRight'){ e.preventDefault(); next.click(); }
-  });
-
   updateDots();
 
   const items = Array.from(grid.querySelectorAll('.gallery-item img'));

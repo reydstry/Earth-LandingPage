@@ -11,11 +11,11 @@
   <body>
     <header class="header">
       <div class="title">🌏 EARTH</div>
-      <nav class="nav">
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#facts">Facts</a>
-        <a href="#gallery">Galery</a>
+        <a href="#gallery">Gallery</a>
       </nav>
     </header>
 
@@ -30,10 +30,10 @@
         </div>
       </article>
 
-      <article id="about" class="section about">
+      <section id="about" class="section about">
         <div class="about-content">
           <aside class="about-image">
-              <img src="assets/about.jpg" alt="about image" />
+            <img src="assets/about.jpg" alt="about image" />
           </aside>
           <div class="about-text">
             <h2>Apasih Bumi itu?</h2>
@@ -47,11 +47,10 @@
             </p>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article id="facts" class="facts">
-        <div class="facts-track" id="factsTrack" tabindex="0"
-          aria-label="Slider Fakta Bumi">
+      <section id="facts" class="facts">
+        <div class="facts-track" id="factsTrack" tabindex="0" aria-label="Slider Fakta Bumi">
           <section class="fact-slide" style="--bg:url('assets/slide1.jpg')">
             <div class="slide-overlay"></div>
             <div class="slide-content">
@@ -92,9 +91,9 @@
           </section>
         </div>
         <div class="facts-dots" id="factsDots" aria-hidden="true"></div>
-      </article>
+      </section>
 
-      <article id="gallery" class="section gallery">
+      <section id="gallery" class="section gallery">
         <h2 class="gallery-title">Gallery</h2>
 
         <div class="content-wrapper">
@@ -136,33 +135,19 @@
             </figure>
           </div>
 
-          <aside class="gallery-info">
-            <h3>Tentang Galeri</h3>
-            <p>Koleksi foto-foto menakjubkan dari planet kita, Bumi, yang
-              diambil dari berbagai sudut dan lokasi.</p>
-            <ul>
-              <li>Bumi dari orbit</li>
-              <li>Satelit Bumi</li>
-              <li>Fenomena alam</li>
-              <li>Pemandangan Himalaya</li>
-              <li>Hutan Hujan Tropis</li>
-              <li>Stasiun Luar Angkasa</li>
-            </ul>
-          </aside>
+          <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="lb-btn lb-close" aria-label="Tutup">✕</button>
+            <button class="lb-btn lb-prev" aria-label="Sebelumnya">❮</button>
+            <img class="lb-img" alt>
+            <button class="lb-btn lb-next" aria-label="Berikutnya">❯</button>
+            <div class="lb-caption" id="lbCaption"></div>
+          </div>
         </div>
-
-        <div class="lightbox" id="lightbox" aria-hidden="true">
-          <button class="lb-btn lb-close" aria-label="Tutup">✕</button>
-          <button class="lb-btn lb-prev" aria-label="Sebelumnya">❮</button>
-          <img class="lb-img" alt>
-          <button class="lb-btn lb-next" aria-label="Berikutnya">❯</button>
-          <div class="lb-caption" id="lbCaption"></div>
-        </div>
-      </article>
+      </section>
     </main>
 
     <footer class="footer">
-      <p>&copy; 2024 Earth Information. All rights reserved.</p>
+      <p>&copy; <time>2025</time> Earth Information. All rights reserved.</p>
     </footer>
   </body>
 </html>

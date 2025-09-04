@@ -115,7 +115,6 @@ body {
   transform: scale(1.05);
 }
 
-
 .about-text {
   max-width: 600px;
 }
@@ -227,14 +226,6 @@ body {
   background: url("assets/stars.jpg") center/cover no-repeat;
 }
 
-.gallery::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, .55);
-  z-index: 0;
-}
-
 .gallery-title {
   position: relative;
   z-index: 1;
@@ -305,32 +296,6 @@ body {
 
 .gallery-grid {
   flex: 3;
-}
-
-.gallery-info {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  color: white;
-}
-
-.gallery-info h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.gallery-info p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.gallery-info ul {
-  list-style-position: inside;
-  line-height: 1.6;
 }
 
 .lightbox {
